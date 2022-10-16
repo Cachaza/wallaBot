@@ -13,7 +13,7 @@ public class Main {
         playwright playwright = new playwright();
 
         String url = "https://es.wallapop.com/app/search?keywords=";
-        String query = "ipad air 4";
+        String query = "lampara lectura";
 
         URL whatismyip = new URL("http://checkip.amazonaws.com");
         BufferedReader in = new BufferedReader(new InputStreamReader(whatismyip.openStream()));
