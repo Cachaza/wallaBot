@@ -5,13 +5,19 @@ import org.jsoup.Jsoup;
 import org.jsoup.select.Elements;
 import com.google.gson.JsonObject;
 
+
+import java.sql.SQLException;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
 
 public class playwright {
-    public String getWallapop(String url) throws Exception {
+    public String getWallapop(String url, String query) throws Exception {
         try (Playwright playwright = Playwright.create()) {
+            database database = new database();
+            System.out.println(query);
+
+
             final BrowserType chromium = playwright.chromium();
             final Browser browser = chromium.launch(new BrowserType.LaunchOptions().setHeadless(false));
             final Page page = browser.newPage();
@@ -47,7 +53,8 @@ public class playwright {
                     e.printStackTrace();
                 }
             }
-            for (int i = 0; i <= 5; i++) {
+
+            for (int i = 0; i <= links.count(); i++) {
                 links.nth(i).click();
                 synchronized (page) {
                     try {
@@ -87,9 +94,14 @@ public class playwright {
                                     "url", urlElemento,
                                     "imagen", imagen
                             );
-                            Gson gsonObj = new Gson();
-                            String jsonStr = gsonObj.toJson(resultado);
-                            System.out.println(jsonStr);
+                            try {
+                                database.añadir(query, resultado);
+                            } catch (SQLException e) {
+                                throw new RuntimeException(e);
+                            }
+                            //Gson gsonObj = new Gson();
+                            //String jsonStr = gsonObj.toJson(resultado);
+                            //System.out.println(jsonStr);
 
 
 
@@ -104,7 +116,7 @@ public class playwright {
             String respuesta = arrayFinal.toString();
 
             browser.close();
-            return respuesta;
+            return "Todo okay";
         } catch (Exception e) {
             e.printStackTrace();
         }
