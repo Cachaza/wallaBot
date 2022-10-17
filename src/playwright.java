@@ -1,15 +1,12 @@
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.microsoft.playwright.*;
-import me.tongfei.progressbar.ProgressBar;
-import me.tongfei.progressbar.ProgressBarStyle;
+
 import org.jsoup.Jsoup;
 import org.jsoup.select.Elements;
 import com.google.gson.JsonObject;
 
 
-import javax.swing.*;
-import javax.swing.plaf.ProgressBarUI;
 import java.sql.SQLException;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
