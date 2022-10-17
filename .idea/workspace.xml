@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/playwright.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/playwright.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webScraping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webScraping.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/escor/Downloads/mysql-connector-java-8.0.30.jar",
+    "last_opened_file_path": "C:/Users/escor/Downloads/progressbar-0.9.5.jar",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -62,7 +63,9 @@
       <option name="presentableId" value="Default" />
       <updated>1665671007004</updated>
       <workItem from="1665671008381" duration="40648000" />
-      <workItem from="1665853132774" duration="16305000" />
+      <workItem from="1665853132774" duration="17058000" />
+      <workItem from="1666001021233" duration="2276000" />
+      <workItem from="1666020635941" duration="1770000" />
     </task>
     <servers />
   </component>

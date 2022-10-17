@@ -1,11 +1,15 @@
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.microsoft.playwright.*;
+import me.tongfei.progressbar.ProgressBar;
+import me.tongfei.progressbar.ProgressBarStyle;
 import org.jsoup.Jsoup;
 import org.jsoup.select.Elements;
 import com.google.gson.JsonObject;
 
 
+import javax.swing.*;
+import javax.swing.plaf.ProgressBarUI;
 import java.sql.SQLException;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -43,10 +47,19 @@ public class playwright {
             if (page.isVisible("text=Confirm suggested preferences")) {
                 page.click("text=Confirm suggested preferences");
             }
-            if (page.isVisible("text=CVer más productos")) {
+            if (page.isVisible("text=Ver más productos")) {
                 page.click("text=Ver más productos");
             }
-
+            synchronized (page) {
+                try {
+                    page.wait(200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (page.isVisible("text=Ver más productos")) {
+                page.click("text=Ver más productos");
+            }
             if (page.isVisible("text=Confirm suggested preferences")) {
                 page.click("text=Confirm suggested preferences");
             }
@@ -63,8 +76,10 @@ public class playwright {
             if (links.count() == 0) {
                 return "No hay resultados";
             }
+
             for (int i = 0; i <= links.count(); i++) {
 
+                System.out.println("Cargando productos: " + i + "/" + links.count());
                 try{
                     links.nth(i).click();
                     synchronized (page) {
@@ -95,6 +110,9 @@ public class playwright {
                                 Elements estado = Jsoup.parse(html).getElementsByClass("ExtraInfo__text");
                                 String urlElemento = page1.url();
                                 String imagen = Jsoup.parse(html).getElementsByClass("card-slider-main ").get(0).getElementsByTag("img").attr("src");
+                                String identifcaor = urlElemento.substring(urlElemento.lastIndexOf("-") + 1);
+
+
 
 
                                 Map<String, String> resultado = Map.of(
@@ -104,7 +122,8 @@ public class playwright {
                                         "fecha", fecha.text(),
                                         "estado", estado.text(),
                                         "url", urlElemento,
-                                        "imagen", imagen
+                                        "imagen", imagen,
+                                        "identificador", identifcaor
                                 );
                                 try {
                                     database.añadir(query, resultado);
@@ -132,6 +151,7 @@ public class playwright {
 
             }
 
+
             String respuesta = arrayFinal.toString();
 
             browser.close();
@@ -141,4 +161,5 @@ public class playwright {
         }
         return null;
     }
+
 }

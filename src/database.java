@@ -18,7 +18,7 @@ public class database {
         System.out.println("Database selected");
 
         try {
-            stmt.executeUpdate("INSERT INTO " + query + " (titulo, precio, descripcion, fecha, estado, url, imagen) VALUES ('" + info.get("titulo") + "', '" + info.get("precio") + "', '" + info.get("descripcion") + "', '" + info.get("fecha") + "', '" + info.get("estado") + "', '" + info.get("url") + "', '" + info.get("imagen") + "')");
+            stmt.executeUpdate("INSERT INTO " + query + " (identificador, titulo, precio, descripcion, fecha, estado, url, imagen) VALUES ('" + info.get("identificador") + "','" + info.get("titulo") + "', '" + info.get("precio") + "', '" + info.get("descripcion") + "', '" + info.get("fecha") + "', '" + info.get("estado") + "', '" + info.get("url") + "', '" + info.get("imagen") + "')");
 
         } catch (SQLException e) {
             System.out.println("Error Code = " + e.getErrorCode());
@@ -55,7 +55,7 @@ public class database {
 
         if (!existe(conn, query)) {
             System.out.println("La tabla no existe");
-            stmt.execute("CREATE TABLE " + query + " (titulo VARCHAR(255), descripcion LONGTEXT, fecha VARCHAR(255), precio VARCHAR(255), estado VARCHAR(255), url VARCHAR(255), imagen VARCHAR(255))");
+            stmt.execute("CREATE TABLE " + query + " (identificador VARCHAR(255), titulo VARCHAR(255), descripcion LONGTEXT, fecha VARCHAR(255), precio VARCHAR(255), estado VARCHAR(255), url VARCHAR(255), imagen VARCHAR(255))");
             System.out.println("Tabla creada");
         } else {
             System.out.println("Tabla ya existe");
