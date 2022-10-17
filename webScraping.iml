@@ -13,5 +13,6 @@
     <orderEntry type="library" name="driver-1.27.1" level="project" />
     <orderEntry type="library" name="driver-bundle-1.27.1" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.30" level="project" />
+    <orderEntry type="library" name="twilio.sdk" level="project" />
   </component>
 </module>
