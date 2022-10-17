@@ -17,16 +17,22 @@ public class database {
         stmt.execute("USE wallapop");
         System.out.println("Database selected");
 
-        try {
+        if (existeElemento(conn, query, info.get("identificador").toString())){
+            System.out.println("Producto, ya existe");
+            
+        } else{
+            try {
             stmt.executeUpdate("INSERT INTO " + query + " (identificador, titulo, precio, descripcion, fecha, estado, url, imagen) VALUES ('" + info.get("identificador") + "','" + info.get("titulo") + "', '" + info.get("precio") + "', '" + info.get("descripcion") + "', '" + info.get("fecha") + "', '" + info.get("estado") + "', '" + info.get("url") + "', '" + info.get("imagen") + "')");
 
-        } catch (SQLException e) {
+            } catch (SQLException e) {
             System.out.println("Error Code = " + e.getErrorCode());
             System.out.println("SQL state = " + e.getSQLState());
             System.out.println("Message = " + e.getMessage());
             System.out.println("printTrace /n");
-
+            }
         }
+
+
 
 
 
@@ -42,6 +48,12 @@ public class database {
 
         return resultSet.next();
 
+    }
+    private boolean existeElemento(Connection conexion, String query, String identificador) throws SQLException {
+        Statement stmt = conexion.createStatement();
+        stmt.execute("USE wallapop");
+        ResultSet rs = stmt.executeQuery("SELECT * FROM " + query + " WHERE identificador = '" + identificador + "'");
+        return rs.next();
     }
 
     public void crearTabla(String query) throws SQLException {
