@@ -19,7 +19,13 @@ public class database {
 
         if (existeElemento(conn, query, info.get("identificador").toString())){
             System.out.println("Producto, ya existe");
-            
+            if (!precioDiferente(conn, query, info.get("identificador").toString(), info.get("precio").toString())){
+                System.out.println("Precio, es diferente");
+                //actualizarPrecio(conn, query, info.get("identificador").toString(), info.get("precio").toString());
+            } else {
+                System.out.println("Precio, es igual");
+            }
+
         } else{
             try {
             stmt.executeUpdate("INSERT INTO " + query + " (identificador, titulo, precio, descripcion, fecha, estado, url, imagen) VALUES ('" + info.get("identificador") + "','" + info.get("titulo") + "', '" + info.get("precio") + "', '" + info.get("descripcion") + "', '" + info.get("fecha") + "', '" + info.get("estado") + "', '" + info.get("url") + "', '" + info.get("imagen") + "')");
@@ -54,6 +60,15 @@ public class database {
         stmt.execute("USE wallapop");
         ResultSet rs = stmt.executeQuery("SELECT * FROM " + query + " WHERE identificador = '" + identificador + "'");
         return rs.next();
+    }
+
+    private boolean precioDiferente(Connection conexion, String query, String identificador, String precio) throws SQLException {
+        Statement stmt = conexion.createStatement();
+        stmt.execute("USE wallapop");
+        ResultSet rs = stmt.executeQuery("SELECT * FROM " + query + " WHERE identificador = '" + identificador + "'");
+        rs.next();
+        String precioActual = rs.getString("precio");
+        return precioActual.equals(precio);
     }
 
     public void crearTabla(String query) throws SQLException {
