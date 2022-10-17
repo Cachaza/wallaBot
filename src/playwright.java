@@ -74,9 +74,9 @@ public class playwright {
                 return "No hay resultados";
             }
 
-            for (int i = 0; i <= links.count(); i++) {
+            for (int i = 0; i < links.count(); i++) {
 
-                System.out.println("Cargando productos: " + i + "/" + links.count());
+                System.out.println("Cargando productos: " + (i+1) + "/" + (links.count()));
                 try{
                     links.nth(i).click();
                     synchronized (page) {
