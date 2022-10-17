@@ -19,9 +19,9 @@ public class database {
 
         if (existeElemento(conn, query, info.get("identificador").toString())){
             System.out.println("Producto, ya existe");
-            if (!precioDiferente(conn, query, info.get("identificador").toString(), info.get("precio").toString())){
+            if (precioDiferente(conn, query, info.get("identificador").toString(), info.get("precio").toString())){
                 System.out.println("Precio, es diferente");
-                //actualizarPrecio(conn, query, info.get("identificador").toString(), info.get("precio").toString());
+                actualizarPrecio(conn, query, info.get("identificador").toString(), info.get("precio").toString());
             } else {
                 System.out.println("Precio, es igual");
             }
@@ -68,7 +68,13 @@ public class database {
         ResultSet rs = stmt.executeQuery("SELECT * FROM " + query + " WHERE identificador = '" + identificador + "'");
         rs.next();
         String precioActual = rs.getString("precio");
-        return precioActual.equals(precio);
+        return !precioActual.equals(precio);
+    }
+
+    private void actualizarPrecio(Connection conexion, String query, String identificador, String precio) throws SQLException {
+        Statement stmt = conexion.createStatement();
+        stmt.execute("USE wallapop");
+        stmt.executeUpdate("UPDATE " + query + " SET precio = '" + precio + "' WHERE identificador = '" + identificador + "'");
     }
 
     public void crearTabla(String query) throws SQLException {
