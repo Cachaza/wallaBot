@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1250ea6-7b64-40e0-86c6-e2df7f9bbc6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/whatsapp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/playwright.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/playwright.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whatsapp.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webScraping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webScraping.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTTP Request" />
+        <option value="OpenAPI" />
       </list>
     </option>
   </component>
@@ -40,11 +45,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/escor/Downloads/progressbar-0.9.5.jar",
-    "project.structure.last.edited": "Libraries",
+    "last_opened_file_path": "C:/Users/escor/Trabajos/webScraping",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.26206896",
-    "settings.editor.selected.configurable": "configurable.group.appearance"
+    "settings.editor.selected.configurable": "swagger"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -52,6 +57,24 @@
     ]
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="SwaggerCodegen">
+      <option name="activeConfigurationType" value="FILE" />
+      <option name="configurationPath" value="" />
+      <option name="customJreEnabled" value="false" />
+      <option name="customTemplatesPath" value="" />
+      <option name="enableDebugLogging" value="false" />
+      <option name="generateToPath" value="C:\Users\escor\Trabajos\webScraping\gen" />
+      <option name="generationParameters">
+        <list />
+      </option>
+      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
+      <option name="jdkPath" value="" />
+      <option name="language" value="java" />
+      <option name="specificationPath" value="C:\Users\escor\Trabajos\webScraping\src\rest.json" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -63,7 +86,16 @@
       <workItem from="1665671008381" duration="40648000" />
       <workItem from="1665853132774" duration="17058000" />
       <workItem from="1666001021233" duration="2276000" />
-      <workItem from="1666020635941" duration="6610000" />
+      <workItem from="1666020635941" duration="11083000" />
+      <workItem from="1666038166629" duration="31000" />
+      <workItem from="1666038342478" duration="6000" />
+      <workItem from="1666038460805" duration="5227000" />
+      <workItem from="1666053072871" duration="1400000" />
+      <workItem from="1666099991101" duration="1178000" />
+      <workItem from="1666201521516" duration="19000" />
+      <workItem from="1666202617499" duration="1796000" />
+      <workItem from="1666205011728" duration="1401000" />
+      <workItem from="1666282633006" duration="1656000" />
     </task>
     <servers />
   </component>
@@ -80,5 +112,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

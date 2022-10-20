@@ -9,7 +9,7 @@ public class database {
         query = query.replace(" ", "_");
 
         Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://192.168.0.14:3306",
+                "jdbc:mysql://***REMOVED***",
                 "root",
                 "***REMOVED***");
         DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
@@ -22,6 +22,7 @@ public class database {
             if (precioDiferente(conn, query, info.get("identificador").toString(), info.get("precio").toString())){
                 System.out.println("Precio, es diferente");
                 actualizarPrecio(conn, query, info.get("identificador").toString(), info.get("precio").toString());
+                System.out.println("Precio, actualizado");
             } else {
                 System.out.println("Precio, es igual");
             }
@@ -80,7 +81,7 @@ public class database {
     public void crearTabla(String query) throws SQLException {
         query = query.replace(" ", "_");
         Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://192.168.0.14:3306",
+                "jdbc:mysql://***REMOVED***",
                 "root",
                 "***REMOVED***");
         Statement stmt = conn.createStatement();

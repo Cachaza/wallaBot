@@ -22,7 +22,7 @@ public class playwright {
 
 
             final BrowserType chromium = playwright.chromium();
-            final Browser browser = chromium.launch(new BrowserType.LaunchOptions().setHeadless(false));
+            final Browser browser = chromium.launch(new BrowserType.LaunchOptions().setHeadless(true));
             final Page page = browser.newPage();
             page.navigate(url);
 

@@ -13,7 +13,8 @@ public class Main {
         playwright playwright = new playwright();
 
         String url = "https://es.wallapop.com/app/search?keywords=";
-        String query = "mx keys";
+        String query = args[0];
+
 
         URL whatismyip = new URL("http://checkip.amazonaws.com");
         BufferedReader in = new BufferedReader(new InputStreamReader(whatismyip.openStream()));
@@ -35,6 +36,8 @@ public class Main {
 
         String respuesta = playwright.getWallapop(urlFinal, query);
         System.out.println(respuesta);
+
+
 
         //System.out.println(respuesta);
         //System.out.println("Total elements: " + document);
