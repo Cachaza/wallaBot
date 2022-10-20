@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b1250ea6-7b64-40e0-86c6-e2df7f9bbc6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +46,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/escor/Trabajos/webScraping",
+    "last_opened_file_path": "C:/Users/escor/Desktop",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.26206896",
@@ -95,7 +96,7 @@
       <workItem from="1666201521516" duration="19000" />
       <workItem from="1666202617499" duration="1796000" />
       <workItem from="1666205011728" duration="1401000" />
-      <workItem from="1666282633006" duration="2230000" />
+      <workItem from="1666282633006" duration="3395000" />
     </task>
     <servers />
   </component>

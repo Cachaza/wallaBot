@@ -9,7 +9,7 @@ public class database {
         query = query.replace(" ", "_");
 
         Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://***REMOVED***",
+                "jdbc:mysql://127.0.0.1:3306",
                 "root",
                 "***REMOVED***");
         DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
