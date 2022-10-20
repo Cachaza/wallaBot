@@ -12,7 +12,6 @@ public class database {
                 "jdbc:mysql://" + databaseUrl,
                 username,
                 password);
-        DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
         Statement stmt = conn.createStatement();
         stmt.execute("USE wallapop");
         System.out.println("Database selected");

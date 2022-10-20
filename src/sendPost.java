@@ -37,7 +37,9 @@ public class sendPost {
         JsonObject jsonObject = new Gson().fromJson(response.body(), JsonObject.class);
 
         System.out.println("Status code: " + response.statusCode());
-        System.out.println("Body: " + response.body());
+        if (response.statusCode() != 200) {
+            System.out.println("Error: " + response.body());
+        }
         return jsonObject;
 
     }
@@ -52,7 +54,6 @@ public class sendPost {
             builder.append("=");
             builder.append(URLEncoder.encode(entry.getValue().toString(), StandardCharsets.UTF_8));
         }
-        System.out.println(builder.toString());
         return HttpRequest.BodyPublishers.ofString(builder.toString());
     }
 }
