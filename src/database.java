@@ -4,14 +4,14 @@ import java.util.Map;
 import com.mysql.cj.jdbc.Driver;
 
 public class database {
-    public void añadir(String query, Map info) throws SQLException {
+    public void añadir(String query, Map info, String password, String username, String databaseUrl) throws SQLException {
         System.out.println(query);
         query = query.replace(" ", "_");
 
         Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://127.0.0.1:3306",
-                "root",
-                "***REMOVED***");
+                "jdbc:mysql://" + databaseUrl,
+                username,
+                password);
         DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
         Statement stmt = conn.createStatement();
         stmt.execute("USE wallapop");
@@ -78,12 +78,12 @@ public class database {
         stmt.executeUpdate("UPDATE " + query + " SET precio = '" + precio + "' WHERE identificador = '" + identificador + "'");
     }
 
-    public void crearTabla(String query) throws SQLException {
+    public void crearTabla(String query, String password, String username, String databaseUrl) throws SQLException {
         query = query.replace(" ", "_");
         Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://***REMOVED***",
-                "root",
-                "***REMOVED***");
+                "jdbc:mysql://" + databaseUrl,
+                username,
+                password);
         Statement stmt = conn.createStatement();
         stmt.execute("USE wallapop");
 

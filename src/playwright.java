@@ -13,12 +13,12 @@ import java.util.concurrent.atomic.AtomicReference;
 
 
 public class playwright {
-    public String getWallapop(String url, String query) throws Exception {
+    public String getWallapop(String url, String query, String password, String username, String databaseUrl) throws Exception {
         try (Playwright playwright = Playwright.create()) {
             database database = new database();
             System.out.println(query);
 
-            database.crearTabla(query);
+            database.crearTabla(query, password, username, databaseUrl);
 
 
             final BrowserType chromium = playwright.chromium();
@@ -123,7 +123,7 @@ public class playwright {
                                         "identificador", identifcaor
                                 );
                                 try {
-                                    database.añadir(query, resultado);
+                                    database.añadir(query, resultado, password, username, databaseUrl);
                                 } catch (SQLException e) {
                                     throw new RuntimeException(e);
                                 }

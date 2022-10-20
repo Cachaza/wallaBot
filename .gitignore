@@ -72,7 +72,7 @@ gradle-app.setting
 *.iml
 *.ipr
 *.iws
-
+config.txt
 ##############################
 ## Eclipse
 ##############################
