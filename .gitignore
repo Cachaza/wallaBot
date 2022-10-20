@@ -73,6 +73,7 @@ gradle-app.setting
 *.ipr
 *.iws
 config.txt
+passwords.txt
 ##############################
 ## Eclipse
 ##############################
