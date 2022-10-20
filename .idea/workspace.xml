@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="webScraping:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b1250ea6-7b64-40e0-86c6-e2df7f9bbc6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/playwright.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/playwright.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whatsapp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webScraping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webScraping.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/escor/Trabajos/webScraping",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.26206896",
     "settings.editor.selected.configurable": "swagger"
@@ -95,7 +95,7 @@
       <workItem from="1666201521516" duration="19000" />
       <workItem from="1666202617499" duration="1796000" />
       <workItem from="1666205011728" duration="1401000" />
-      <workItem from="1666282633006" duration="1656000" />
+      <workItem from="1666282633006" duration="2230000" />
     </task>
     <servers />
   </component>
