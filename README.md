@@ -1,5 +1,5 @@
 
-# Wallabot
+# WallaBot
 
 Bot creado en java para wallapop que una vez proporcionado un query, lo busca en wallapop e
 indexa cada uno de los resultados en una base de datos SQL que proporcione el usuario
