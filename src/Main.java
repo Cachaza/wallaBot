@@ -43,6 +43,7 @@ public class Main {
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            return;
         }
 
         String url = "https://es.wallapop.com/app/search?keywords=";
