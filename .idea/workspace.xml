@@ -5,9 +5,14 @@
       <artifact name="webScraping:jar" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b1250ea6-7b64-40e0-86c6-e2df7f9bbc6c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +54,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.26206896",
-    "settings.editor.selected.configurable": "swagger"
+    "settings.editor.selected.configurable": "reference.settings.deploy.options"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -95,7 +100,7 @@
       <workItem from="1666201521516" duration="19000" />
       <workItem from="1666202617499" duration="1796000" />
       <workItem from="1666205011728" duration="1401000" />
-      <workItem from="1666282633006" duration="12296000" />
+      <workItem from="1666282633006" duration="54274000" />
     </task>
     <servers />
   </component>
