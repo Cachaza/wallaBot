@@ -9,10 +9,10 @@ import java.util.Map;
 public class playwright {
     public String getWallapop(String url, String query, String password, String username, String databaseUrl) {
         try (Playwright playwright = Playwright.create()) {
-            database database = new database();
+            database database = new database(password, username, databaseUrl);
             System.out.println(query);
 
-            database.crearTabla(query, password, username, databaseUrl);
+            database.crearTabla(query);
 
 
             final BrowserType chromium = playwright.chromium();
@@ -113,7 +113,7 @@ public class playwright {
                                     "identificador", identifcaor
                             );
                             try {
-                                database.añadir(query, resultado, password, username, databaseUrl);
+                                database.añadir(query, resultado);
                             } catch (SQLException e) {
                                 throw new RuntimeException(e);
                             }
