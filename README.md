@@ -8,7 +8,7 @@ indexa cada uno de los resultados en una base de datos SQL que proporcione el us
 
 
 ## Requisitos
-Java OpenSDK 19
+Amazon Coretto 11
     
 ## Uso
 Descargar el ultimo .jar del repositorio (o compilarlo) y crear un archivo de configuracion en la misma carpeta
